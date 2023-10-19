@@ -1,0 +1,63 @@
+.toolbar {
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 20px;
+  background-color: inherit;
+}
+
+.brand {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  margin: 0px 20px;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 0.5px solid #cbcbcb;
+  margin: 0px 20px;
+}
+@media only screen and (min-width: 700px) {
+  .avatar {
+    margin: 0px 20px 0px 80px;
+  }
+}
+
+.brandName {
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+
+@media only screen and (max-width: 700px) {
+  .brandName {
+    display: none;
+  }
+}
+
+.searchBar {
+  min-width: 200px;
+  width: 30vw;
+  padding: 5px;
+  margin: 0 10px;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.searchInput:focus {
+  outline: none;
+}
