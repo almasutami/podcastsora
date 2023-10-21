@@ -4,10 +4,9 @@ import { useEffect, useState } from "react";
 
 interface ToolbarProps {
   onSearch: (query: string) => void;
-  userAvatarSrc: string;
 }
 
-const Toolbar: React.FC<ToolbarProps> = ({ onSearch, userAvatarSrc }) => {
+const Toolbar: React.FC<ToolbarProps> = ({ onSearch }) => {
   return (
     <div className={styles.toolbar}>
       <div className={styles.brand}>
@@ -15,7 +14,7 @@ const Toolbar: React.FC<ToolbarProps> = ({ onSearch, userAvatarSrc }) => {
         <img className={styles.logo} src="/logo.png" alt="Website Logo" />
 
         <div className={styles.brandName}>
-          <h2>Podcastsora</h2>
+          <p>podcastsora</p>
         </div>
       </div>
 
@@ -28,9 +27,6 @@ const Toolbar: React.FC<ToolbarProps> = ({ onSearch, userAvatarSrc }) => {
           onChange={(e) => onSearch(e.target.value)}
         />
       </div>
-
-      {/* User Avatar */}
-      <img className={styles.avatar} src={userAvatarSrc} alt="User Avatar" />
     </div>
   );
 };
