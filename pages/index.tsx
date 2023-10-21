@@ -95,6 +95,17 @@ export default function Home() {
             <div>
               {day()}, {date()}/{month()}/{year} {hour()}:{minute()}:{second()}
             </div>
+            <div>
+              <img className={styles.icon} src="/cloud.png" alt="Cloud" />
+              <img className={styles.icon} src="/cloudday.png" alt="Cloud" />
+              <img className={styles.icon} src="/cloudnight.png" alt="Cloud" />
+              <img className={styles.icon} src="/rainsun.png" alt="Cloud" />
+              <img className={styles.icon} src="/rainy.png" alt="Cloud" />
+              <img className={styles.icon} src="/snowing.png" alt="Cloud" />
+              <img className={styles.icon} src="/storm.png" alt="Cloud" />
+              <img className={styles.icon} src="/sun.png" alt="Cloud" />
+              <img className={styles.icon} src="/wind.png" alt="Cloud" />
+            </div>
           </div>
         </div>
       </main>

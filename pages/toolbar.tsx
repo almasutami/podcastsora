@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "../styles/Toolbar.module.css";
-import { useEffect, useState } from "react";
 
 interface ToolbarProps {
   onSearch: (query: string) => void;
