@@ -1,0 +1,482 @@
+[
+  {
+    "code": 1000,
+    "day": "Sunny",
+    "night": "Clear",
+    "icon": 113,
+    "dayIconPath": "/sun.png",
+    "nightIconPath": "/moon.png",
+    "dayMessage": "Enjoy the sunshine today!",
+    "nightMessage": "Clear skies for a peaceful night."
+  },
+  {
+    "code": 1003,
+    "day": "Partly cloudy",
+    "night": "Partly cloudy",
+    "icon": 116,
+    "dayIconPath": "/cloudday.png",
+    "nightIconPath": "/cloudnight.png",
+    "dayMessage": "Expect a mix of sun and clouds during the day.",
+    "nightMessage": "Partly cloudy night with a hint of moonlight."
+  },
+  {
+    "code": 1006,
+    "day": "Cloudy",
+    "night": "Cloudy",
+    "icon": 119,
+    "dayIconPath": "/cloud.png",
+    "nightIconPath": "/cloud.png",
+    "dayMessage": "It's a cloudy day today.",
+    "nightMessage": "Cloudy night with a calm atmosphere."
+  },
+  {
+    "code": 1009,
+    "day": "Overcast",
+    "night": "Overcast",
+    "icon": 122,
+    "dayIconPath": "/cloudday.png",
+    "nightIconPath": "/cloudnight.png",
+    "dayMessage": "Overcast skies today, but don't let it dampen your spirits.",
+    "nightMessage": "A peaceful overcast night."
+  },
+  {
+    "code": 1030,
+    "day": "Mist",
+    "night": "Mist",
+    "icon": 143,
+    "dayIconPath": "/mist.png",
+    "nightIconPath": "/mist.png",
+    "dayMessage": "A misty day, creating a mysterious atmosphere.",
+    "nightMessage": "Misty night, perfect for a quiet stroll."
+  },
+  {
+    "code": 1063,
+    "day": "Patchy rain possible",
+    "night": "Patchy rain possible",
+    "icon": 176,
+    "dayIconPath": "/rainsun.png",
+    "nightIconPath": "/rainmoon.png",
+    "dayMessage": "Possibility of patchy rain during the day. Be prepared!",
+    "nightMessage": "Patchy rain possible at night. Keep dry!"
+  },
+  {
+    "code": 1066,
+    "day": "Patchy snow possible",
+    "night": "Patchy snow possible",
+    "icon": 179,
+    "dayIconPath": "/snowsun.png",
+    "nightIconPath": "/snowmoon.png",
+    "dayMessage": "Be cautious, there's a chance of patchy snow during the day.",
+    "nightMessage": "Patchy snow possible at night. Bundle up!"
+  },
+  {
+    "code": 1069,
+    "day": "Patchy sleet possible",
+    "night": "Patchy sleet possible",
+    "icon": 182,
+    "dayIconPath": "/snowsun.png",
+    "nightIconPath": "/snowmoon.png",
+    "dayMessage": "Watch out for sleet during the day.",
+    "nightMessage": "Sleet may occur at night. Stay warm!"
+  },
+  {
+    "code": 1072,
+    "day": "Patchy freezing drizzle possible",
+    "night": "Patchy freezing drizzle possible",
+    "icon": 185,
+    "dayIconPath": "/snowsun.png",
+    "nightIconPath": "/snowmoon.png",
+    "dayMessage": "Possibility of freezing drizzle during the day.",
+    "nightMessage": "Freezing drizzle possible at night. Be cautious!"
+  },
+  {
+    "code": 1087,
+    "day": "Thundery outbreaks possible",
+    "night": "Thundery outbreaks possible",
+    "icon": 200,
+    "dayIconPath": "/storm.png",
+    "nightIconPath": "/storm.png",
+    "dayMessage": "Thunderstorms may occur during the day. Stay safe!",
+    "nightMessage": "Thundery outbreaks possible at night. Keep indoors!"
+  },
+  {
+    "code": 1114,
+    "day": "Blowing snow",
+    "night": "Blowing snow",
+    "icon": 227,
+    "dayIconPath": "/snowing.png",
+    "nightIconPath": "/snowing.png",
+    "dayMessage": "Expect blowing snow during the day.",
+    "nightMessage": "Blowing snow continues at night. Be careful!"
+  },
+  {
+    "code": 1117,
+    "day": "Blizzard",
+    "night": "Blizzard",
+    "icon": 230,
+    "dayIconPath": "/snowing.png",
+    "nightIconPath": "/snowing.png",
+    "dayMessage": "A blizzard is expected during the day. Stay indoors!",
+    "nightMessage": "Blizzard continues at night. Stay safe and warm!"
+  },
+  {
+    "code": 1135,
+    "day": "Fog",
+    "night": "Fog",
+    "icon": 248,
+    "dayIconPath": "/mist.png",
+    "nightIconPath": "/mist.png",
+    "dayMessage": "It's a foggy day. Drive safely!",
+    "nightMessage": "Foggy night. Visibility may be low. Take care!"
+  },
+  {
+    "code": 1147,
+    "day": "Freezing fog",
+    "night": "Freezing fog",
+    "icon": 260,
+    "dayIconPath": "/mist.png",
+    "nightIconPath": "/mist.png",
+    "dayMessage": "Freezing fog during the day. Be cautious!",
+    "nightMessage": "Freezing fog at night. Be extra careful!"
+  },
+  {
+    "code": 1150,
+    "day": "Patchy light drizzle",
+    "night": "Patchy light drizzle",
+    "icon": 263,
+    "dayIconPath": "/rainsun.png",
+    "nightIconPath": "/rainmoon.png",
+    "dayMessage": "Expect patchy light drizzle during the day.",
+    "nightMessage": "Patchy light drizzle at night. Carry an umbrella!"
+  },
+  {
+    "code": 1153,
+    "day": "Light drizzle",
+    "night": "Light drizzle",
+    "icon": 266,
+    "dayIconPath": "/rainsun.png",
+    "nightIconPath": "/rainmoon.png",
+    "dayMessage": "Light drizzle expected during the day.",
+    "nightMessage": "Light drizzle continues at night. Stay dry!"
+  },
+  {
+    "code": 1168,
+    "day": "Freezing drizzle",
+    "night": "Freezing drizzle",
+    "icon": 281,
+    "dayIconPath": "/rainsun.png",
+    "nightIconPath": "/rainmoon.png",
+    "dayMessage": "Freezing drizzle during the day. Be cautious!",
+    "nightMessage": "Freezing drizzle at night. Watch your step!"
+  },
+  {
+    "code": 1171,
+    "day": "Heavy freezing drizzle",
+    "night": "Heavy freezing drizzle",
+    "icon": 284,
+    "dayIconPath": "/rainsun.png",
+    "nightIconPath": "/rainmoon.png",
+    "dayMessage": "Heavy freezing drizzle during the day. Be very cautious!",
+    "nightMessage": "Heavy freezing drizzle at night. Exercise extreme caution!"
+  },
+  {
+    "code": 1180,
+    "day": "Patchy light rain",
+    "night": "Patchy light rain",
+    "icon": 293,
+    "dayIconPath": "/rainsun.png",
+    "nightIconPath": "/rainmoon.png",
+    "dayMessage": "Patchy light rain expected during the day.",
+    "nightMessage": "Patchy light rain continues at night. Carry an umbrella!"
+  },
+  {
+    "code": 1183,
+    "day": "Light rain",
+    "night": "Light rain",
+    "icon": 296,
+    "dayIconPath": "/rainsun.png",
+    "nightIconPath": "/rainmoon.png",
+    "dayMessage": "Light rain expected during the day.",
+    "nightMessage": "Light rain continues at night. Stay dry!"
+  },
+  {
+    "code": 1186,
+    "day": "Moderate rain at times",
+    "night": "Moderate rain at times",
+    "icon": 299,
+    "dayIconPath": "/rainy.png",
+    "nightIconPath": "/rainy.png",
+    "dayMessage": "Expect moderate rain at times during the day.",
+    "nightMessage": "Moderate rain at times continues at night. Stay dry!"
+  },
+  {
+    "code": 1189,
+    "day": "Moderate rain",
+    "night": "Moderate rain",
+    "icon": 302,
+    "dayIconPath": "/rainy.png",
+    "nightIconPath": "/rainy.png",
+    "dayMessage": "Moderate rain expected during the day.",
+    "nightMessage": "Moderate rain continues at night. Stay dry!"
+  },
+  {
+    "code": 1192,
+    "day": "Heavy rain at times",
+    "night": "Heavy rain at times",
+    "icon": 305,
+    "dayIconPath": "/rainy.png",
+    "nightIconPath": "/rainy.png",
+    "dayMessage": "Expect heavy rain at times during the day. Stay dry!",
+    "nightMessage": "Heavy rain at times continues at night. Stay dry!"
+  },
+  {
+    "code": 1195,
+    "day": "Heavy rain",
+    "night": "Heavy rain",
+    "icon": 308,
+    "dayIconPath": "/rainy.png",
+    "nightIconPath": "/rainy.png",
+    "dayMessage": "Heavy rain expected during the day. Stay dry!",
+    "nightMessage": "Heavy rain continues at night. Stay dry!"
+  },
+  {
+    "code": 1198,
+    "day": "Light freezing rain",
+    "night": "Light freezing rain",
+    "icon": 311,
+    "dayIconPath": "/rainsun.png",
+    "nightIconPath": "/rainmoon.png",
+    "dayMessage": "Expect light freezing rain during the day. Be cautious!",
+    "nightMessage": "Light freezing rain continues at night. Watch your step!"
+  },
+  {
+    "code": 1201,
+    "day": "Moderate or heavy freezing rain",
+    "night": "Moderate or heavy freezing rain",
+    "icon": 314,
+    "dayIconPath": "/rainsun.png",
+    "nightIconPath": "/rainmoon.png",
+    "dayMessage": "Expect moderate or heavy freezing rain during the day. Be cautious!",
+    "nightMessage": "Moderate or heavy freezing rain continues at night. Watch your step!"
+  },
+  {
+    "code": 1204,
+    "day": "Light sleet",
+    "night": "Light sleet",
+    "icon": 317,
+    "dayIconPath": "/rainsun.png",
+    "nightIconPath": "/rainmoon.png",
+    "dayMessage": "Expect light sleet during the day. Be cautious!",
+    "nightMessage": "Light sleet continues at night. Watch your step!"
+  },
+  {
+    "code": 1207,
+    "day": "Moderate or heavy sleet",
+    "night": "Moderate or heavy sleet",
+    "icon": 320,
+    "dayIconPath": "/rainsun.png",
+    "nightIconPath": "/rainmoon.png",
+    "dayMessage": "Expect moderate or heavy sleet during the day. Be cautious!",
+    "nightMessage": "Moderate or heavy sleet continues at night. Watch your step!"
+  },
+  {
+    "code": 1210,
+    "day": "Patchy light snow",
+    "night": "Patchy light snow",
+    "icon": 323,
+    "dayIconPath": "/snowing.png",
+    "nightIconPath": "/snowing.png",
+    "dayMessage": "Expect patchy light snow during the day. Enjoy the snowfall!",
+    "nightMessage": "Patchy light snow continues at night. Enjoy the snowfall!"
+  },
+  {
+    "code": 1213,
+    "day": "Light snow",
+    "night": "Light snow",
+    "icon": 326,
+    "dayIconPath": "/snowsun.png",
+    "nightIconPath": "/snowmoon.png",
+    "dayMessage": "Expect light snow during the day. Enjoy the snowfall!",
+    "nightMessage": "Light snow continues at night. Enjoy the snowfall!"
+  },
+  {
+    "code": 1216,
+    "day": "Patchy moderate snow",
+    "night": "Patchy moderate snow",
+    "icon": 329,
+    "dayIconPath": "/snowsun.png",
+    "nightIconPath": "/snowmoon.png",
+    "dayMessage": "Expect patchy moderate snow during the day. Stay warm!",
+    "nightMessage": "Patchy moderate snow continues at night. Stay warm!"
+  },
+  {
+    "code": 1219,
+    "day": "Moderate snow",
+    "night": "Moderate snow",
+    "icon": 332,
+    "dayIconPath": "/snowing.png",
+    "nightIconPath": "/snowing.png",
+    "dayMessage": "Expect moderate snow during the day. Stay warm!",
+    "nightMessage": "Moderate snow continues at night. Stay warm!"
+  },
+  {
+    "code": 1222,
+    "day": "Patchy heavy snow",
+    "night": "Patchy heavy snow",
+    "icon": 335,
+    "dayIconPath": "/snowing.png",
+    "nightIconPath": "/snowing.png",
+    "dayMessage": "Expect patchy heavy snow during the day. Stay warm!",
+    "nightMessage": "Patchy heavy snow continues at night. Stay warm!"
+  },
+  {
+    "code": 1225,
+    "day": "Heavy snow",
+    "night": "Heavy snow",
+    "icon": 338,
+    "dayIconPath": "/snowing.png",
+    "nightIconPath": "/snowing.png",
+    "dayMessage": "Expect heavy snow during the day. Stay warm!",
+    "nightMessage": "Heavy snow continues at night. Stay warm!"
+  },
+  {
+    "code": 1237,
+    "day": "Ice pellets",
+    "night": "Ice pellets",
+    "icon": 350,
+    "dayIconPath": "/snowsun.png",
+    "nightIconPath": "/snowmoon.png",
+    "dayMessage": "Expect ice pellets during the day. Be cautious!",
+    "nightMessage": "Ice pellets continue at night. Be cautious!"
+  },
+  {
+    "code": 1240,
+    "day": "Light rain shower",
+    "night": "Light rain shower",
+    "icon": 353,
+    "dayIconPath": "/rainsun.png",
+    "nightIconPath": "/rainmoon.png",
+    "dayMessage": "Expect light rain showers during the day. Carry an umbrella!",
+    "nightMessage": "Light rain showers continue at night. Carry an umbrella!"
+  },
+  {
+    "code": 1243,
+    "day": "Moderate or heavy rain shower",
+    "night": "Moderate or heavy rain shower",
+    "icon": 356,
+    "dayIconPath": "/rainy.png",
+    "nightIconPath": "/rainy.png",
+    "dayMessage": "Expect moderate or heavy rain showers during the day. Carry an umbrella!",
+    "nightMessage": "Moderate or heavy rain showers continue at night. Carry an umbrella!"
+  },
+  {
+    "code": 1246,
+    "day": "Torrential rain shower",
+    "night": "Torrential rain shower",
+    "icon": 359,
+    "dayIconPath": "/rainy.png",
+    "nightIconPath": "/rainy.png",
+    "dayMessage": "Expect torrential rain showers during the day. Stay indoors!",
+    "nightMessage": "Torrential rain showers continue at night. Stay indoors!"
+  },
+  {
+    "code": 1249,
+    "day": "Light sleet showers",
+    "night": "Light sleet showers",
+    "icon": 362,
+    "dayIconPath": "/rainsun.png",
+    "nightIconPath": "/rainmoon.png",
+    "dayMessage": "Expect light sleet showers during the day. Be cautious!",
+    "nightMessage": "Light sleet showers continue at night. Be cautious!"
+  },
+  {
+    "code": 1252,
+    "day": "Moderate or heavy sleet showers",
+    "night": "Moderate or heavy sleet showers",
+    "icon": 365,
+    "dayIconPath": "/rainsun.png",
+    "nightIconPath": "/rainmoon.png",
+    "dayMessage": "Expect moderate or heavy sleet showers during the day. Be cautious!",
+    "nightMessage": "Moderate or heavy sleet showers continue at night. Be cautious!"
+  },
+  {
+    "code": 1255,
+    "day": "Light snow showers",
+    "night": "Light snow showers",
+    "icon": 368,
+    "dayIconPath": "/snowsun.png",
+    "nightIconPath": "/snowmoon.png",
+    "dayMessage": "Expect light snow showers during the day. Enjoy the snowfall!",
+    "nightMessage": "Light snow showers continue at night. Enjoy the snowfall!"
+  },
+  {
+    "code": 1258,
+    "day": "Moderate or heavy snow showers",
+    "night": "Moderate or heavy snow showers",
+    "icon": 371,
+    "dayIconPath": "/snowsun.png",
+    "nightIconPath": "/snowmoon.png",
+    "dayMessage": "Expect moderate or heavy snow showers during the day. Stay warm!",
+    "nightMessage": "Moderate or heavy snow showers continue at night. Stay warm!"
+  },
+  {
+    "code": 1261,
+    "day": "Light showers of ice pellets",
+    "night": "Light showers of ice pellets",
+    "icon": 374,
+    "dayIconPath": "/snowsun.png",
+    "nightIconPath": "/snowmoon.png",
+    "dayMessage": "Expect light showers of ice pellets during the day. Be cautious!",
+    "nightMessage": "Light showers of ice pellets continue at night. Be cautious!"
+  },
+  {
+    "code": 1264,
+    "day": "Moderate or heavy showers of ice pellets",
+    "night": "Moderate or heavy showers of ice pellets",
+    "icon": 377,
+    "dayIconPath": "/snowsun.png",
+    "nightIconPath": "/snowmoon.png",
+    "dayMessage": "Expect moderate or heavy showers of ice pellets during the day. Be cautious!",
+    "nightMessage": "Moderate or heavy showers of ice pellets continue at night. Be cautious!"
+  },
+  {
+    "code": 1273,
+    "day": "Patchy light rain with thunder",
+    "night": "Patchy light rain with thunder",
+    "icon": 386,
+    "dayIconPath": "/stormsun.png",
+    "nightIconPath": "/stormmoon.png",
+    "dayMessage": "Expect patchy light rain with thunder during the day. Stay safe!",
+    "nightMessage": "Patchy light rain with thunder continues at night. Stay safe!"
+  },
+  {
+    "code": 1276,
+    "day": "Moderate or heavy rain with thunder",
+    "night": "Moderate or heavy rain with thunder",
+    "icon": 389,
+    "dayIconPath": "/storm.png",
+    "nightIconPath": "/storm.png",
+    "dayMessage": "Expect moderate or heavy rain with thunder during the day. Stay safe!",
+    "nightMessage": "Moderate or heavy rain with thunder continues at night. Stay safe!"
+  },
+  {
+    "code": 1279,
+    "day": "Patchy light snow with thunder",
+    "night": "Patchy light snow with thunder",
+    "icon": 392,
+    "dayIconPath": "/stormsun.png",
+    "nightIconPath": "/stormmoon.png",
+    "dayMessage": "Expect patchy light snow with thunder during the day. Stay warm and safe!",
+    "nightMessage": "Patchy light snow with thunder continues at night. Stay warm and safe!"
+  },
+  {
+    "code": 1282,
+    "day": "Moderate or heavy snow with thunder",
+    "night": "Moderate or heavy snow with thunder",
+    "icon": 395,
+    "dayIconPath": "/storm.png",
+    "nightIconPath": "/storm.png",
+    "dayMessage": "Expect moderate or heavy snow with thunder during the day. Stay warm and safe!",
+    "nightMessage": "Moderate or heavy snow with thunder continues at night. Stay warm and safe!"
+  }
+]

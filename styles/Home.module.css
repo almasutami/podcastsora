@@ -44,12 +44,27 @@
 
 .content {
   padding: 0 5rem;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+@media only screen and (max-width: 800px) {
+  .content {
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .content {
+    flex-direction: column;
+    padding: 0;
+  }
 }
 
 .greetingsContainer {
   display: flex;
   flex-direction: column;
-  gap: 2px 0;
   margin: 10px 0;
 }
 
@@ -58,11 +73,74 @@
   font-weight: 700;
   display: flex;
   flex-direction: column;
+  margin-bottom: 20px;
 }
 
 .icon {
+  width: 30px;
+  height: 30px;
+  margin: 0px;
+  filter: brightness(0) invert(1);
+}
+
+.landingIcon {
+  width: 300px;
+  height: 300px;
+  margin: 0px;
+  filter: brightness(0) invert(1);
+}
+
+.landingIconContainer {
+  margin: 10px;
+}
+
+.sideContainer {
+  margin: 10px;
+  width: calc(1 / 4 * 100vw);
+}
+
+.temperatureLocation {
+  padding: 10px 0px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 1rem;
+}
+
+.condition {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  margin-bottom: 10px;
+}
+
+.currentTemperature {
+  font-size: 120px;
+  font-weight: 400;
+}
+
+.forecastContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.forecastRow {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: center;
+}
+
+.forecastIcon {
   width: 50px;
   height: 50px;
   margin: 0px;
   filter: brightness(0) invert(1);
+}
+
+.forecastTitle {
+  font-size: 32px;
+  font-weight: 600;
 }
