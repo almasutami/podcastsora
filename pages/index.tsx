@@ -4,6 +4,8 @@ import styles from "../styles/Home.module.css";
 import conditionCodes from "./conditionCode.json";
 import { useState, useEffect, lazy, Suspense } from "react";
 
+export const runtime = "edge";
+
 export default function Home() {
   const [query, setQuery] = useState("");
   const [currentWeatherData, setCurrentWeatherData] = useState(null);
