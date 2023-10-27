@@ -203,13 +203,19 @@ export default function Home() {
           <div className={styles.greetings}>
             <div
               className={styles.skeleton}
-              style={{ width: "100px", height: "20px" }}
+              style={{ width: "350px", height: "20px" }}
+            ></div>
+          </div>
+          <div className={styles.greetings}>
+            <div
+              className={styles.skeleton}
+              style={{ width: "350px", height: "20px", marginBottom: "10px" }}
             ></div>
           </div>
           <div className={styles.words}>
             <div
               className={styles.skeleton}
-              style={{ width: "100px", height: "20px" }}
+              style={{ width: "400px", height: "20px" }}
             ></div>
           </div>
         </>
@@ -238,7 +244,7 @@ export default function Home() {
         <div>
           <div
             className={styles.skeleton}
-            style={{ width: "100px", height: "200px" }}
+            style={{ width: "300px", height: "300px" }}
           ></div>
         </div>
       );
