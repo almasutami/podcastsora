@@ -4,7 +4,6 @@ import styles from "../styles/Home.module.css";
 import conditionCodes from "./conditionCode.json";
 import { useState, useEffect, lazy, Suspense } from "react";
 
-const corsProxy = "https://cors-anywhere.herokuapp.com/";
 const apiUrl = "https://api.weatherapi.com/v1/";
 
 export default function Home() {
@@ -49,7 +48,7 @@ export default function Home() {
   const fetchData = async (location: string) => {
     setLoading(true);
     const response = await fetch(
-      `${corsProxy}${apiUrl}current.json?key=77392728de4d437791691053231810&q=${location}`
+      `${apiUrl}current.json?key=77392728de4d437791691053231810&q=${location}`
     );
     const data = await response.json();
     setCurrentWeatherData(data);
@@ -59,7 +58,7 @@ export default function Home() {
   const fetchAutocompleteData = async (query: string) => {
     setLocationListLoading(true);
     const response = await fetch(
-      `${corsProxy}${apiUrl}search.json?key=77392728de4d437791691053231810&q=${query}`
+      `${apiUrl}search.json?key=77392728de4d437791691053231810&q=${query}`
     );
     const data = await response.json();
     setLocationList(data);
@@ -69,7 +68,7 @@ export default function Home() {
   const fetchForecastData = async (location: string) => {
     setForecastLoading(true);
     const response = await fetch(
-      `${corsProxy}${apiUrl}forecast.json?key=77392728de4d437791691053231810&q=${location}&days=3`
+      `${apiUrl}forecast.json?key=77392728de4d437791691053231810&q=${location}&days=3`
     );
     const data = await response.json();
     if (!data?.error) {
