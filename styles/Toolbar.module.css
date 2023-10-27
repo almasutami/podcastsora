@@ -92,3 +92,28 @@
 .locationRegion {
   font-size: smaller;
 }
+
+.locationRowLoading {
+  padding: 14px 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.spinningArrow {
+  animation: spin 2s linear infinite;
+  width: 12px;
+  height: 12px;
+  margin: 0px;
+  background: none;
+}

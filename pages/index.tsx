@@ -195,7 +195,24 @@ export default function Home() {
   };
 
   const renderGreetings = () => {
-    if (loading) return <div className={styles.loading}>Loading...</div>;
+    if (loading) {
+      return (
+        <>
+          <div className={styles.greetings}>
+            <div
+              className={styles.skeleton}
+              style={{ width: "100px", height: "20px" }}
+            ></div>
+          </div>
+          <div className={styles.words}>
+            <div
+              className={styles.skeleton}
+              style={{ width: "100px", height: "20px" }}
+            ></div>
+          </div>
+        </>
+      );
+    }
     return (
       <>
         <div className={styles.greetings}>
@@ -214,7 +231,15 @@ export default function Home() {
   };
 
   const renderIcon = () => {
-    if (loading) return <div className={styles.loading}>Loading...</div>;
+    if (loading)
+      return (
+        <div>
+          <div
+            className={styles.skeleton}
+            style={{ width: "100px", height: "200px" }}
+          ></div>
+        </div>
+      );
     return (
       <div>
         <img
@@ -227,6 +252,67 @@ export default function Home() {
           alt={currentWeatherData?.current?.condition?.text}
         />
       </div>
+    );
+  };
+
+  const renderTemperature = () => {
+    if (loading)
+      return (
+        <>
+          <div>
+            <div className={styles.currentTemperature}>
+              <div
+                className={styles.skeleton}
+                style={{ width: "100px", height: "20px" }}
+              ></div>
+            </div>
+            <div className={styles.condition}>
+              <div
+                className={styles.skeleton}
+                style={{ width: "100px", height: "20px" }}
+              ></div>{" "}
+              <div
+                className={styles.skeleton}
+                style={{ width: "100px", height: "20px" }}
+              ></div>
+            </div>
+          </div>
+          <div>
+            <div
+              className={styles.skeleton}
+              style={{ width: "100px", height: "20px" }}
+            ></div>{" "}
+            <div
+              className={styles.skeleton}
+              style={{ width: "100px", height: "20px" }}
+            ></div>
+          </div>
+        </>
+      );
+    return (
+      <>
+        <div>
+          <div className={styles.currentTemperature}>
+            {currentWeatherData?.current?.temp_c?.toFixed(0)}&deg;C
+          </div>
+          <div className={styles.condition}>
+            <div>
+              {"Feels like "}
+              {currentWeatherData?.current?.feelslike_c?.toFixed(0)}&deg;C
+            </div>
+            <div>{currentWeatherData?.current?.condition?.text}</div>
+          </div>
+        </div>
+        <div>
+          <div>
+            {currentWeatherData?.location?.name},{" "}
+            {currentWeatherData?.location?.country}
+          </div>
+          <div>
+            {day()}, {date()}/{month()}/{year} {hour()}:{minute()}
+          </div>
+        </div>
+      </>
     );
   };
 
@@ -251,30 +337,12 @@ export default function Home() {
           <div className={styles.landingIconContainer}>{renderIcon()}</div>
           <div className={styles.sideContainer}>
             <div className={styles.temperatureLocation}>
-              <div>
-                <div className={styles.currentTemperature}>
-                  {currentWeatherData?.current?.temp_c?.toFixed(0)}&deg;C
-                </div>
-                <div className={styles.condition}>
-                  <div>
-                    {"Feels like "}
-                    {currentWeatherData?.current?.feelslike_c?.toFixed(0)}&deg;C
-                  </div>
-                  <div>{currentWeatherData?.current?.condition?.text}</div>
-                </div>
-              </div>
-              <div>
-                <div>
-                  {currentWeatherData?.location?.name},{" "}
-                  {currentWeatherData?.location?.country}
-                </div>
-                <div>
-                  {day()}, {date()}/{month()}/{year} {hour()}:{minute()}
-                </div>
-              </div>
+              {renderTemperature()}
             </div>
             <div className={styles.forecast}>
-              <div className={styles.forecastTitle}>3 Days Forecast</div>
+              <div className={styles.forecastTitle}>
+                {forecastLoading ? "" : "3 Days Forecast"}
+              </div>
               <div>{renderForecast()}</div>
             </div>
           </div>

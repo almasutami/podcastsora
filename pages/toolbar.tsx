@@ -44,7 +44,14 @@ const Toolbar: React.FC<ToolbarProps> = ({
   };
 
   const renderLocationListLoading = () => {
-    return <div className={styles.locationRow}>Loading...</div>;
+    return (
+      <div className={styles.locationRowLoading}>
+        <div>Loading...</div>
+        <div>
+          <img className={styles.spinningArrow} src="/arrow.png" />
+        </div>{" "}
+      </div>
+    );
   };
 
   const handleLocationSelect = (latitude: number, longitude: number) => {
