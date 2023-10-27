@@ -56,7 +56,7 @@ export default function Home() {
   const fetchAutocompleteData = async (query: string) => {
     setLocationListLoading(true);
     const response = await fetch(
-      `http://api.weatherapi.com/v1/search.json?key=77392728de4d437791691053231810&q=${query}`
+      `https://api.weatherapi.com/v1/search.json?key=77392728de4d437791691053231810&q=${query}`
     );
     const data = await response.json();
     setLocationList(data);
