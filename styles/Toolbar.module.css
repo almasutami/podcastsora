@@ -58,3 +58,37 @@
 .searchInput::placeholder {
   color: white;
 }
+
+.locationList {
+  display: flex;
+  flex-direction: column;
+  overflow: visible;
+  z-index: 10;
+  background-color: white;
+  color: #434343;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  position: absolute;
+  min-width: 200px;
+  width: 26vw;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.locationRow {
+  padding: 14px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.locationRow:hover {
+  background-color: rgb(231, 231, 231);
+  cursor: pointer;
+}
+
+.locationLatLong {
+  font-weight: bolder;
+}
+
+.locationRegion {
+  font-size: smaller;
+}

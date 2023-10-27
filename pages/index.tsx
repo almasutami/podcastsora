@@ -8,17 +8,21 @@ export default function Home() {
   const [query, setQuery] = useState("");
   const [currentWeatherData, setCurrentWeatherData] = useState(null);
   const [forecastWeatherData, setForecastWeatherData] = useState(null);
+  const [locationList, setLocationList] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [forecastLoading, setForecastLoading] = useState(false);
+  const [locationListLoading, setLocationListLoading] = useState(false);
+
   const defaultLocation = "Bandung";
 
   useEffect(() => {
     const delay = 500;
     const timerId = setTimeout(() => {
-      if (query === "") {
+      if (query !== "") {
+        fetchAutocompleteData(query);
+      } else {
         fetchData(defaultLocation);
         fetchForecastData(defaultLocation);
-      } else {
-        fetchData(query);
-        fetchForecastData(query);
       }
     }, delay);
 
@@ -29,15 +33,38 @@ export default function Home() {
     setQuery(query);
   };
 
+  const handleLocationSelect = (locationLatLong: string) => {
+    if (locationLatLong === "") {
+      fetchData(defaultLocation);
+      fetchForecastData(defaultLocation);
+    } else {
+      fetchData(locationLatLong);
+      fetchForecastData(locationLatLong);
+    }
+  };
+
   const fetchData = async (location: string) => {
+    setLoading(true);
     const response = await fetch(
       `https://api.weatherapi.com/v1/current.json?key=77392728de4d437791691053231810&q=${location}`
     );
     const data = await response.json();
     setCurrentWeatherData(data);
+    setLoading(false);
+  };
+
+  const fetchAutocompleteData = async (query: string) => {
+    setLocationListLoading(true);
+    const response = await fetch(
+      `http://api.weatherapi.com/v1/search.json?key=77392728de4d437791691053231810&q=${query}`
+    );
+    const data = await response.json();
+    setLocationList(data);
+    setLocationListLoading(false);
   };
 
   const fetchForecastData = async (location: string) => {
+    setForecastLoading(true);
     const response = await fetch(
       `https://api.weatherapi.com/v1/forecast.json?key=77392728de4d437791691053231810&q=${location}&days=3`
     );
@@ -45,6 +72,7 @@ export default function Home() {
     if (!data?.error) {
       setForecastWeatherData(data);
     }
+    setForecastLoading(false);
   };
 
   const today = new Date();
@@ -97,13 +125,6 @@ export default function Home() {
       return today.getMinutes();
     }
   };
-  const second = () => {
-    if (today.getSeconds() < 10) {
-      return "0" + today.getSeconds();
-    } else {
-      return today.getSeconds();
-    }
-  };
   const greetings = () => {
     if (today.getHours() < 12) {
       return "Morning";
@@ -147,6 +168,8 @@ export default function Home() {
   };
 
   const renderForecast = () => {
+    if (forecastLoading)
+      return <div className={styles.loading}>Loading...</div>;
     const threeDaysForecastData = forecastWeatherData?.forecast?.forecastday;
 
     return (
@@ -171,6 +194,42 @@ export default function Home() {
     );
   };
 
+  const renderGreetings = () => {
+    if (loading) return <div className={styles.loading}>Loading...</div>;
+    return (
+      <>
+        <div className={styles.greetings}>
+          <div>Good</div>
+          <div>{greetings()}!</div>
+        </div>
+        <div className={styles.words}>
+          {
+            renderIconPathAndMessage(
+              currentWeatherData?.current?.condition?.code
+            )?.message
+          }
+        </div>
+      </>
+    );
+  };
+
+  const renderIcon = () => {
+    if (loading) return <div className={styles.loading}>Loading...</div>;
+    return (
+      <div>
+        <img
+          className={styles.landingIcon}
+          src={
+            renderIconPathAndMessage(
+              currentWeatherData?.current?.condition?.code
+            )?.icon
+          }
+          alt={currentWeatherData?.current?.condition?.text}
+        />
+      </div>
+    );
+  };
+
   return (
     <div className={styles.container}>
       <Head>
@@ -180,35 +239,16 @@ export default function Home() {
 
       <main>
         <div className={styles.toolbarContainer}>
-          <Toolbar onSearch={handleSearch} />
+          <Toolbar
+            onSearch={handleSearch}
+            onLocationSelect={handleLocationSelect}
+            locationList={locationList}
+            locationListLoading={locationListLoading}
+          />
         </div>
         <div className={styles.content}>
-          <div className={styles.greetingsContainer}>
-            <div className={styles.greetings}>
-              <div>Good</div>
-              <div>{greetings()}!</div>
-            </div>
-            <div className={styles.words}>
-              {
-                renderIconPathAndMessage(
-                  currentWeatherData?.current?.condition?.code
-                )?.message
-              }
-            </div>
-          </div>
-          <div className={styles.landingIconContainer}>
-            <div>
-              <img
-                className={styles.landingIcon}
-                src={
-                  renderIconPathAndMessage(
-                    currentWeatherData?.current?.condition?.code
-                  )?.icon
-                }
-                alt={currentWeatherData?.current?.condition?.text}
-              />
-            </div>
-          </div>
+          <div className={styles.greetingsContainer}>{renderGreetings()}</div>
+          <div className={styles.landingIconContainer}>{renderIcon()}</div>
           <div className={styles.sideContainer}>
             <div className={styles.temperatureLocation}>
               <div>
@@ -244,6 +284,8 @@ export default function Home() {
       <style jsx global>{`
         html,
         body {
+          height: 100%;
+          width: 100%;
           padding: 0;
           margin: 0;
           font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
